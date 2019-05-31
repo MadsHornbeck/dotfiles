@@ -2,6 +2,9 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" Set leader to space
+let mapleader = "\<Space>"
+
 " How many commands vim saves
 set history=200
 
@@ -29,8 +32,20 @@ set ignorecase
 " unless we use a capital letter
 set smartcase
 
+" Indentation
+set tabstop=2
+set shiftwidth=2
+set softtabstop=0
+set expandtab
+set smarttab
+
 " Set color. TODO: revisit this!
 colo ron
 
 " consider the following plugins
 " * https://github.com/lifepillar/vim-mucomplete
+
+" let g:ale_fixers = {
+" \ 'javacript': ['prettier', 'eslint'],
+" \}
+nmap <leader>d :ALEFix<cr>
