@@ -45,7 +45,9 @@ colo ron
 " consider the following plugins
 " * https://github.com/lifepillar/vim-mucomplete
 
-" let g:ale_fixers = {
-" \ 'javacript': ['prettier', 'eslint'],
-" \}
+let g:ale_fixers = {
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ 'javascript': ['prettier', 'eslint'],
+\}
+
 nmap <leader>d :ALEFix<cr>
