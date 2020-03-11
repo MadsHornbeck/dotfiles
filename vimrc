@@ -50,4 +50,12 @@ let g:ale_fixers = {
 \ 'javascript': ['prettier', 'eslint'],
 \}
 
+" ctrlp
+set runtimepath^=~/.vim/pack/git-plugins/start/ctrlp.vim
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](doc|tmp|node_modules)',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+
 nmap <leader>d :ALEFix<cr>
